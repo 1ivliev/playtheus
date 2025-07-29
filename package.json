@@ -1,0 +1,45 @@
+{
+  "name": "playtheus",
+  "version": "0.0.3",
+  "description": "Playwright prometheus reporter ",
+  "main": "dist/playtheus.js",
+  "types": "dist/index.d.js",
+  "peerDependencies": {
+    "@playwright/test": "^1.42.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "prepare": "npm run build",
+    "start": "node dist/index.js",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "playwright test"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1ivliev/playtheus.git"
+  },
+  "keywords": [
+    "playwright",
+    "reporter",
+    "prometheus"
+  ],
+  "author": "Kirill Ivliev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1ivliev/playtheus/issues"
+  },
+  "homepage": "https://github.com/1ivliev/playtheus#readme",
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "prometheus-remote-write": "^0.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  },
+  "type": "module"
+}
